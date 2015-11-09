@@ -1,0 +1,8 @@
+prefix=/home/amateus/HANNRS/catkin_ws/install
+
+Name: hannrs_send_goals
+Description: Description of hannrs_send_goals
+Version: 0.0.0
+Cflags: -I/home/amateus/HANNRS/catkin_ws/install/include
+Libs: -L/home/amateus/HANNRS/catkin_ws/install/lib -lhannrs_send_goals
+Requires: actionlib angles geometry_msgs hannrs_msgs move_base_msgs roscpp tf

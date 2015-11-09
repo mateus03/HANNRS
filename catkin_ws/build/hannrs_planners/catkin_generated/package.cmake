@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hannrs_planners")
+set(hannrs_planners_MAINTAINER "mateus <mateus@todo.todo>")
+set(hannrs_planners_DEPRECATED "")
+set(hannrs_planners_VERSION "0.0.0")
+set(hannrs_planners_BUILD_DEPENDS "angles" "costmap_2d" "dynamic_reconfigure" "geometry_msgs" "nav_core" "nav_msgs" "navfn" "pluginlib" "roscpp" "tf")
+set(hannrs_planners_RUN_DEPENDS "angles" "costmap_2d" "dynamic_reconfigure" "geometry_msgs" "nav_core" "nav_msgs" "navfn" "pluginlib" "roscpp" "tf")
+set(hannrs_planners_BUILDTOOL_DEPENDS "catkin")

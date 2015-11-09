@@ -1,0 +1,223 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="person_siting">
+    <static>true</static>
+    <link name="person_siting">
+      <visual name="torso_top">
+	<pose>0 0 0.7 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.2 0.4 0.6</size>
+	  </box>
+	</geometry>
+	<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+        </material>
+      </visual>
+      <visual name="torso_bottom">
+	<pose>0 0 0.35 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.2 0.1 0.1</size>
+	  </box>
+	</geometry>
+	<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Red</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="torso_top">
+	<pose>0 0 0.7 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.2 0.4 0.6</size>
+	  </box>
+	</geometry>
+      </collision>
+      <collision name="torso_bottom">
+	<pose>0 0 0.35 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.2 0.1 0.1</size>
+	  </box>
+	</geometry>
+      </collision>
+
+      <visual name="head">
+	<pose>0 0 1.15 0 0 0</pose>
+	<geometry>
+	  <sphere>
+	    <radius>0.15</radius>
+	  </sphere>
+	</geometry>
+	<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/SmileyHappy</name>
+          </script>
+        </material>
+      </visual>
+      <collision name = "head">
+	<pose>0 0 1.15 0 0 0</pose>
+	<geometry>
+	  <sphere>
+	    <radius>0.15</radius>
+	  </sphere>
+	</geometry>
+      </collision>
+
+      <visual name="left_arm">
+	<pose>0 0.225 0.65 0 0 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.05</radius>
+	    <length>0.70</length>
+	  </cylinder>
+	</geometry>
+	<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="left_arm">
+	<pose>0 0.225 0.65 0 0 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.05</radius>
+	    <length>0.70</length>
+	  </cylinder>
+	</geometry>
+      </collision>
+
+      <visual name ="right_arm">
+	<pose>0 -0.225 0.65 0 0 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.05</radius>
+	    <length>0.70</length>
+	  </cylinder>
+	</geometry>
+	<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+        </material>
+      </visual>
+      <collision name ="right_arm">
+	<pose>0 -0.225 0.65 0 0 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.05</radius>
+	    <length>0.70</length>
+	  </cylinder>
+	</geometry>
+      </collision>
+
+      <visual name ="left_leg1">
+	<pose>0.125 0.115 0.32 0 1.5757 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.08</radius>
+	    <length>0.50</length>
+	  </cylinder>
+	</geometry>
+	<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Red</name>
+          </script>
+        </material>
+      </visual>
+      <visual name ="left_leg2">
+	<pose>0.3 0.115 0.12 0 0 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.08</radius>
+	    <length>0.450</length>
+	  </cylinder>
+	</geometry>
+	<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Red</name>
+          </script>
+        </material>
+      </visual>
+      <collision name ="left_leg1">
+	<pose>0.125 0.115 0.32 0 1.5757 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.08</radius>
+	    <length>0.50</length>
+	  </cylinder>
+	</geometry>
+      </collision>
+      <collision name ="left_leg2">
+	<pose>0.3 0.115 0.12 0 0 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.08</radius>
+	    <length>0.40</length>
+	  </cylinder>
+	</geometry>
+      </collision>
+
+      <visual name ="right_leg1">
+	<pose>0.125 -0.115 0.32 0 1.5757 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.08</radius>
+	    <length>0.50</length>
+	  </cylinder>
+	</geometry>
+	<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Red</name>
+          </script>
+        </material>
+      </visual>
+      <visual name ="right_leg2">
+	<pose>0.3 -0.115 0.12 0 0 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.08</radius>
+	    <length>0.40</length>
+	  </cylinder>
+	</geometry>
+	<material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Red</name>
+          </script>
+        </material>
+      </visual>
+      <collision name ="right_leg1">
+	<pose>0.125 -0.115 0.32 0 1.5757 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.08</radius>
+	    <length>0.5</length>
+	  </cylinder>
+	</geometry>
+      </collision>
+      <collision name ="right_leg2">
+	<pose>0.3 -0.115 0.12 0 0 0</pose>
+	<geometry>
+	  <cylinder>
+	    <radius>0.08</radius>
+	    <length>0.4</length>
+	  </cylinder>
+	</geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

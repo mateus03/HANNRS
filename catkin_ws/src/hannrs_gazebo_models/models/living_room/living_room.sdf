@@ -1,0 +1,230 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="living_room">
+    <link name ="south_wall">
+      <visual name="south_wall">
+	<pose>0 -5.1 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>10 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='south_wall'>
+        <geometry>
+          <box>
+	    <size>10 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 -5.1 1.25 0 -0 0</pose>
+      </collision>
+    </link>
+    <link name ="west_wall">
+      <visual name="west_wall">
+	<pose>-5.1 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 10 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='west_wall'>
+        <geometry>
+          <box>
+	    <size>0.2 20 2.5</size>
+          </box>
+        </geometry>
+        <pose>-5.1 0 1.25 0 -0 0</pose>
+      </collision>
+    </link>
+    <link name ="north_wall">
+      <visual name="north_wall">
+	<pose>0 5.1 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>10 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='west_wall'>
+        <geometry>
+          <box>
+	    <size>10 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 5.1 1.25 0 -0 0</pose>
+      </collision>
+    </link>
+    <link name ="east_wall">
+      <visual name="east_wall">
+	<pose>5.1 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 10 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='east_wall'>
+        <geometry>
+          <box>
+	    <size>0.2 10 2.5</size>
+          </box>
+        </geometry>
+        <pose>5.1 0 1.25 0 -0 0</pose>
+      </collision>
+    </link>
+    <link name="chair">
+      <visual name="chair">
+	<pose>-0.32 3.2 0 0 0 0</pose>
+	<geometry>
+	  <mesh><uri>model://living_room/meshes/chair2.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="chair">
+	<pose>-0.32 3.2 0 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.44 0.45 0.95</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="chair2">
+      <visual name="chair2">
+	<pose>0.32 3.2 0 0 0 0</pose>
+	<geometry>
+	  <mesh><uri>model://living_room/meshes/chair2.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="chair2">
+	<pose>0.32 3.2 0 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.44 0.45 0.95</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="chair3">
+      <visual name="chair3">
+	<pose>-0.32 3.8 0 0 0 0</pose>
+	<geometry>
+	  <mesh><uri>model://living_room/meshes/chair3.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="chair3">
+	<pose>-0.32 3.8 0 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.44 0.45 0.95</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="chair4">
+      <visual name="chair4">
+	<pose>0.32 3.8 0 0 0 0</pose>
+	<geometry>
+	  <mesh><uri>model://living_room/meshes/chair3.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="chair4">
+	<pose>0.32 3.8 0 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.44 0.45 0.95</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="plant">
+      <visual name="plant">
+	<pose>4.7 4.7 0 0 0 0</pose>
+	<geometry>
+	  <mesh><uri>model://living_room/meshes/plant1.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="plant">
+	<pose>4.7 4.7 0 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.55 0.55 0.6</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="plant2">
+      <visual name="plant2">
+	<pose>-4.7 4.7 0 0 0 0</pose>
+	<geometry>
+	  <mesh><uri>model://living_room/meshes/plant1.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="plant2">
+	<pose>-4.7 4.7 0 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.55 0.55 0.6</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="plant3">
+      <visual name="plant3">
+	<pose>-4.7 -4.7 0 0 0 0</pose>
+	<geometry>
+	  <mesh><uri>model://living_room/meshes/plant1.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="plant3">
+	<pose>-4.7 -4.7 0 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.55 0.55 0.6</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+    <link name="plant4">
+      <visual name="plant4">
+	<pose>4.7 -4.7 0 0 0 0</pose>
+	<geometry>
+	  <mesh><uri>model://living_room/meshes/plant1.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="plant4">
+	<pose>4.7 -4.7 0 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.55 0.55 0.6</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+    <static>1</static>
+  </model>
+</sdf>

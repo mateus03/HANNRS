@@ -1,0 +1,4 @@
+std_msgs/String action
+std_msgs/String person
+---
+std_msgs/Float64 wait_time

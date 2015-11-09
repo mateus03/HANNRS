@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+    
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <!--<include>
+      <uri>model://floor</uri>
+    </include>-->
+    
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    <include>
+      <uri>model://living_room</uri>
+    </include>
+    
+    <include>
+      <pose>-3 2 0 0 0 -1.5757</pose>
+      <uri>model://actor</uri>
+      <name>Ze</name>
+      <plugin name="ze_control" filename="libze_control_lib.so"/>
+    </include>
+    
+    <include>
+      <pose>3 2 0 0 0 -1.5757</pose>
+      <uri>model://actor</uri>
+      <name>Manel</name>
+      <plugin name="manel_control" filename="libmanel_control_lib.so"/>
+    </include>
+    
+    <include>
+      <pose>0 -1.87 0.2 0 0 -1.5757</pose>
+      <uri>model://actor_siting</uri>
+      <name>Quim</name>
+    </include>
+    
+    <include>
+      <pose>0 3.5 0 0 0 0</pose>
+      <uri>model://table</uri>
+    </include>
+    
+    <include>
+      <pose>-4.9 -2.5 0 0 0 1.5757</pose>
+      <uri>model://bookshelf</uri>
+      <name>book1</name>
+    </include>
+    
+    <include>
+      <pose>-4.9 2.5 0 0 0 1.5757</pose>
+      <uri>model://bookshelf</uri>
+      <name>book2</name>
+    </include>
+    
+    <include>
+      <pose>0 -1.87 0 0 0 0</pose>
+      <uri>model://sofa</uri>
+    </include>
+    
+    <include>
+      <pose>0 -4.78 0 0 0 0</pose>
+      <uri>model://tv</uri>
+    </include>
+    
+    <include>
+      <pose>0 -3.25 0 0 0 0</pose>
+      <uri>model://coffee_table</uri>
+    </include>
+    
+    <!--<include>
+      <pose>4.7 4.7 0 0 0 0</pose>
+      <uri>model://plant</uri>
+      <name>plant1</name>
+    </include>
+    
+    <include>
+      <pose>-4.7 4.7 0 0 0 0</pose>
+      <uri>model://plant</uri>
+      <name>plant2</name>
+    </include>
+    
+    <include>
+      <pose>4.7 -4.7 0 0 0 0</pose>
+      <uri>model://plant</uri>
+      <name>plant3</name>
+    </include>
+    
+    <include>
+      <pose>4.7 -4.7 0 0 0 0</pose>
+      <uri>model://plant</uri>
+      <name>plant4</name>
+    </include>-->
+    
+   <!-- <include>
+      <pose>-0.32 3.2 0 0 0 0</pose>
+      <uri>model://chair2</uri>
+    </include>-->
+    
+    
+  </world>
+</sdf>

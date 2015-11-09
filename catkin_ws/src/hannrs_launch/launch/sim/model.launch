@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find cobot_description)/urdf/omni_cobot.urdf.xacro'"/>
+
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model omni_cobot -param robot_description -z .2"/>
+
+  <!-- TF hacker for the gazebo TFs -->
+  <node pkg="tf" type="static_transform_publisher" name="tf_create_base_link1" args="0 0 0 0 0 0 /base_footprint /base_link 33.33"/>
+  <node pkg="tf" type="static_transform_publisher" name="tf_create_base_link2" args="0 0 0 0 0 0 /base_link /scout_base_link 33.33"/>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find cobot_description)/config/omni_cobot.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/omni_cobot"
+	args="scout_body_to_back_wheel_joint_controller scout_body_to_left_wheel_joint_controller scout_body_to_right_wheel_joint_controller"/>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+    <param name="publish_frequency" type="double" value="30.0"/>
+  </node>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+	  <param name="/use_gui" value="false"/>
+	  <param name="/publish_default_positions" value="true"/>
+	  <rosparam param="source_list">[omni_joint_states]</rosparam>
+<!--  	  <rosparam command="load" file="$(find cobot_description)/config/zeros.yaml"/> -->
+  </node>
+
+  <rosparam file="$(find cobot_description)/../config/simulation_omni.yaml" command="load"/>
+  <node name="motor_controllers" pkg="omni_odometry" type="motion_node" output="screen" />
+
+  <node name="control_translator" pkg="mbot_simulation" type="control_translator"/>
+  
+  <node name="odom_broadcaster" pkg="mbot_simulation" type="odom_broadcaster"/>
+  
+  <node pkg="tf" type="static_transform_publisher" name="tf_hacker" args="0 0 0 0 0 0 /map /odom 33.33"/>
+  
+  
+</launch>

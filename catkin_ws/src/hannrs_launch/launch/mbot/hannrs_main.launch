@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<launch>
+	<!-- arg name="map" default="$(find maps)/isr6-v03cr.yaml"/ -->
+
+	<arg name="map" default="$(find hannrs_maps)/maps/hannrs_LRM-nav.yaml"/>
+	<arg name="navmap" default="$(find hannrs_maps)/maps/hannrs_LRM-nav.yaml"/>
+
+        <arg name="use_move_base" default="false"/>
+
+	<param name="map" type="string" value="$(arg map)"/>
+	<param name="navmap" type="string" value="$(arg navmap)"/>
+	<param name="shape" type="string" value="$(find config)/mbot_shell_shape-1px_5mm-c72_64.yaml"/>
+	<rosparam file="$(find config)/mbot.yaml"/>
+
+	<remap from="/tf" to="/$(env MBOT_NAME)/tf"/>
+
+
+	<!-- Run the map server -->
+	<node name="map_server" pkg="map_server" type="map_server" args=" $(arg map)" required="true">
+            <param name="frame_id" value="/map" />
+        </node>
+    
+	<!--- AMCL -->
+	<include file="amcl.launch"/>
+        <!-- node pkg="amcl" type="amcl" name="amcl">
+          <param name="odom_model_type" value="omni"/>
+          <param name="odom_frame_id" value="/odom"/>
+          <param name="global_frame_id" value="/map"/>
+        </node -->
+
+
+	<!-- Navigation -->
+        <group unless="$(arg use_move_base)">
+            <node name="navigation" pkg="scout_navigation" type="navigator">
+		<param name="~guidance_method" type="string" value="fmm"/>
+		<param name="~platform_mode" type="string" value="omni"/>
+	    </node>
+        </group>
+        <group if="$(arg use_move_base)">
+            <include file="move_base.launch"/>
+	    <node name="navigation" pkg="scout_navigation" type="navigator" output="screen">
+		<param name="~guidance_method" type="string" value="move_base"/>
+		<param name="~platform_mode" type="string" value="omni"/>
+	    </node>
+        </group>       
+
+	<!-- Web console -->
+	<node name="webconsole" pkg="webconsole" type="server">
+	  <param name="~home" type="string" value="home_mbot.html"/>
+	</node>
+
+        <!-- Logging -->
+        <node name="logger" pkg="diagnostics" type="mbot_logger.py"/>
+	
+</launch>

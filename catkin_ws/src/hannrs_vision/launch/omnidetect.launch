@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <!--<node pkg="hannrs_vision" type="omnidetect" name="omnidetect" output="screen">
+    <param name="image" value="/camera_driver_99_2/stream" />
+    <param name="calib_file" value="$(find hannrs_vision)/calib/calib_cam99.yml"/>
+    <param name="data_file" value="$(find hannrs_vision)/data/data0_cam99.yaml"/>
+    <param name="borders_file" value="$(find hannrs_vision)/calib/cam99_borders.yaml"/>
+  </node>-->
+  
+  <node pkg="hannrs_vision" type="omnidetect" name="omnidetect" output="screen">
+    <param name="image" value="/camera_driver_97_2/stream" />
+    <param name="calib_file" value="$(find hannrs_vision)/calib/calib_cam97.yml"/>
+    <param name="data_file" value="$(find hannrs_vision)/data/data0_cam97.yaml"/>
+    <param name="borders_file" value="$(find hannrs_vision)/calib/cam97_borders.yaml"/>
+  </node>
+  
+  <!--<node pkg="hannrs_vision" type="omnidetect" name="omnidetect" output="screen">
+    <param name="image" value="/camera_driver_98_2/stream" />
+    <param name="calib_file" value="$(find hannrs_vision)/calib/calib_cam98.yml"/>
+    <param name="data_file" value="$(find hannrs_vision)/data/data0_cam98.yaml"/>
+    <param name="borders_file" value="$(find hannrs_vision)/calib/cam98_borders.yaml"/>
+  </node>-->
+
+</launch>

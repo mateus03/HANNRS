@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hannrs_tests")
+set(hannrs_tests_MAINTAINER "mateus <mateus@todo.todo>")
+set(hannrs_tests_DEPRECATED "")
+set(hannrs_tests_VERSION "0.0.0")
+set(hannrs_tests_BUILD_DEPENDS "geometry_msgs" "nav_msgs" "roscpp" "std_msgs" "cv_bridge" "hannrs_msgs")
+set(hannrs_tests_RUN_DEPENDS "geometry_msgs" "nav_msgs" "roscpp" "std_msgs" "cv_bridge" "hannrs_msgs")
+set(hannrs_tests_BUILDTOOL_DEPENDS "catkin")

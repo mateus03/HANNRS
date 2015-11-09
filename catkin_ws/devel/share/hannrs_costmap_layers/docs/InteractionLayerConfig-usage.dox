@@ -1,0 +1,8 @@
+\subsubsection usage Usage
+\verbatim
+<node name="hannrs_costmap_layers" pkg="hannrs_costmap_layers" type="hannrs_costmap_layers">
+  <param name="enabled" type="bool" value="True" />
+  <param name="importance" type="double" value="1.0" />
+</node>
+\endverbatim
+

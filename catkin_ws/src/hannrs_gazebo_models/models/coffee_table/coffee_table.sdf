@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="coffee_table">
+    <link name="coffee_table">
+      <visual name="coffee_table">
+	<geometry>
+	  <mesh><uri>model://coffee_table/meshes/coffee_table.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="coffee_table">
+	<pose>0 0 0.22 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>1.1 0.46 0.44</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

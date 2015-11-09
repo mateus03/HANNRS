@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hannrs_costmap_layers")
+set(hannrs_costmap_layers_MAINTAINER "mateus <mateus@todo.todo>")
+set(hannrs_costmap_layers_DEPRECATED "")
+set(hannrs_costmap_layers_VERSION "0.0.0")
+set(hannrs_costmap_layers_BUILD_DEPENDS "costmap_2d" "dynamic_reconfigure" "hannrs_msgs" "pluginlib" "roscpp")
+set(hannrs_costmap_layers_RUN_DEPENDS "costmap_2d" "dynamic_reconfigure" "hannrs_msgs" "pluginlib" "roscpp")
+set(hannrs_costmap_layers_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,17 @@
+<library path="libhannrs_planners">
+  <class name="hannrs_planners/Dijkstra_planner" type="hannrs_planners::Dijkstra_planner" base_class_type="nav_core::BaseGlobalPlanner">
+    <description>
+      A implementation of a grid based planner using Dijkstra
+    </description>
+  </class>
+  <class name="hannrs_planners/Astar_planner" type="hannrs_planners::Astar_planner" base_class_type="nav_core::BaseGlobalPlanner">
+    <description>
+      A implementation of a grid based planner using A*
+    </description>
+  </class>
+  <!--<class name="hannrs_planners/RRT_Planner" type="hannrs_planners::RRT_Planner" base_class_type="nav_core::BaseGlobalPlanner">
+    <description>
+      A implementation of a grid based planner using OMPL's RRT
+    </description>
+  </class>-->
+</library>

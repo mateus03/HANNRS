@@ -1,0 +1,8 @@
+prefix=/home/amateus/HANNRS/catkin_ws/devel
+
+Name: hannrs_gazebo_models
+Description: Description of hannrs_gazebo_models
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/amateus/HANNRS/catkin_ws/devel/lib 
+Requires: 

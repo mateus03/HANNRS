@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <node pkg="hannrs_vision" type="test_svm" name="test_svm" output="screen">
+    <param name="data_file" value="$(find hannrs_vision)/data/trainfull2_cam97.yaml" />
+    <param name="test_file" value="$(find hannrs_vision)/data/testfull2_cam97.yaml"/>
+<!--     <param name="classifier" value="$(find hannrs_vision)/data/cam98full_classifier.xml"/> -->
+  </node>
+
+</launch>

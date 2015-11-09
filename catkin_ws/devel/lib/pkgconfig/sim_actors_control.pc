@@ -1,0 +1,8 @@
+prefix=/home/amateus/HANNRS/catkin_ws/devel
+
+Name: sim_actors_control
+Description: Description of sim_actors_control
+Version: 0.0.0
+Cflags: -I/home/amateus/HANNRS/catkin_ws/src/sim_actors_control/include
+Libs: -L/home/amateus/HANNRS/catkin_ws/devel/lib -lsim_actors_control
+Requires: gazebo_ros geometry_msgs hannrs_msgs roscpp

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  <!-- Launching amcl, joy and the drivers --> 
+  <arg name="map" default="$(find hannrs_maps)/maps/hannrs_LRM.yaml"/>
+  
+  <node name="map_server" pkg="map_server" type="map_server" args=" $(arg map)" required="true">
+    <param name="frame_id" value="/map" />
+  </node>
+  
+</launch>

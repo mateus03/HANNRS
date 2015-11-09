@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <node pkg="hannrs_vision" type="hanp_vision_node" name="hannrs_vision" output="screen">
+    <param name="image" value="/camera_driver_99_3/image" />
+    <param name="calib_file" value="$(find hannrs_vision)/calib/calib_results_cam99_2.yml"/>
+  </node>
+
+</launch>

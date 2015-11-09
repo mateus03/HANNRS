@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hannrs_send_goals")
+set(hannrs_send_goals_MAINTAINER "mateus <mateus@todo.todo>")
+set(hannrs_send_goals_DEPRECATED "")
+set(hannrs_send_goals_VERSION "0.0.0")
+set(hannrs_send_goals_BUILD_DEPENDS "actionlib" "angles" "geometry_msgs" "hannrs_msgs" "move_base_msgs" "roscpp" "tf")
+set(hannrs_send_goals_RUN_DEPENDS "actionlib" "angles" "geometry_msgs" "hannrs_msgs" "move_base_msgs" "roscpp" "tf")
+set(hannrs_send_goals_BUILDTOOL_DEPENDS "catkin")

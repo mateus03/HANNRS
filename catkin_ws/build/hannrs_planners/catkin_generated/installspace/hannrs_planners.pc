@@ -1,0 +1,8 @@
+prefix=/home/amateus/HANNRS/catkin_ws/install
+
+Name: hannrs_planners
+Description: Description of hannrs_planners
+Version: 0.0.0
+Cflags: -I/home/amateus/HANNRS/catkin_ws/install/include
+Libs: -L/home/amateus/HANNRS/catkin_ws/install/lib -lhannrs_planners
+Requires: costmap_2d dynamic_reconfigure geometry_msgs nav_core navfn nav_msgs pluginlib roscpp tf

@@ -1,0 +1,281 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="home_hallway">
+    <static>1</static>
+    <link name ="lwest_wall">
+      <visual name="lwest_wall">
+	<pose>-2.5 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 4 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='lwest_wall'>
+        <geometry>
+          <box>
+	    <size>0.2 4 2.5</size>
+          </box>
+        </geometry>
+        <pose>-2.5 0 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="lnorth_wall">
+      <visual name="lnorth_wall">
+	<pose>0 2 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>5 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='lnorth_wall'>
+        <geometry>
+          <box>
+	    <size>5 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 2 1.25 0 -0 0</pose>
+      </collision>
+    </link>
+    
+    <link name ="lsouth_wall">
+      <visual name="lsouth_wall">
+	<pose>0 -2 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>5 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='lsouth_wall'>
+        <geometry>
+          <box>
+	    <size>5 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 -2 1.25 0 -0 0</pose>
+      </collision>
+    </link>
+    
+    <link name ="least_wall">
+      <visual name="least_wall">
+	<pose>2.5 0.6 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 2.8 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='least_wall'>
+        <geometry>
+          <box>
+	    <size>0.2 2.8 2.5</size>
+          </box>
+        </geometry>
+        <pose>2.5 0.6 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+    
+     <link name ="cnorth_wall">
+      <visual name="cnorth_wall">
+	<pose>3.5 2 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='cnorth_wall'>
+        <geometry>
+          <box>
+	    <size>2 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>3.5 2 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="ceast_wall">
+      <visual name="ceast_wall">
+	<pose>4.5 -2.4 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 8.8 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='ceast_wall'>
+        <geometry>
+          <box>
+	    <size>0.2 8.8 2.5</size>
+          </box>
+        </geometry>
+        <pose>4.5 -2.4 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="cwest_wall">
+      <visual name="cwest_wall">
+	<pose>2.5 -5 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 6 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='cwest_wall'>
+        <geometry>
+          <box>
+	    <size>0.2 6 2.5</size>
+          </box>
+        </geometry>
+        <pose>2.5 -5 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="csouth_wall">
+      <visual name="csouth_wall">
+	<pose>3.5 -8 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='csouth_wall'>
+        <geometry>
+          <box>
+	    <size>2 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>3.5 -8 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="ksouth_wall">
+      <visual name="ksouth_wall">
+	<pose>7 -8 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>5 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='ksouth_wall'>
+        <geometry>
+          <box>
+	    <size>5 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>7 -8 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="kwest_wall">
+      <visual name="kwest_wall">
+	<pose>9.5 -6 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 4 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='kwest_wall'>
+        <geometry>
+          <box>
+	    <size>0.2 4 2.5</size>
+          </box>
+        </geometry>
+        <pose>9.5 -6 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="knorth_wall">
+      <visual name="knorth_wall">
+	<pose>7 -4 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>5 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='knorth_wall'>
+        <geometry>
+          <box>
+	    <size>5 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>7 -4 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+  </model>
+</sdf>

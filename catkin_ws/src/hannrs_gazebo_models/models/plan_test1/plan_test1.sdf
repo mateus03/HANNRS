@@ -1,0 +1,131 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="plan_test1">
+    <static>1</static>
+    <link name ="west_wall">
+      <visual name="west_wall">
+	<pose>-3 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 6 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='west_wall'>
+        <geometry>
+          <box>
+	    <size>0.2 6 2.5</size>
+          </box>
+        </geometry>
+        <pose>-3.0 0 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="east_wall">
+      <visual name="east_wall">
+	<pose>3.0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 6 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='east_wall'>
+        <geometry>
+          <box>
+	    <size>0.2 6 2.5</size>
+          </box>
+        </geometry>
+        <pose>3.0 0 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="north_wall">
+      <visual name="north_wall">
+	<pose>0 3.0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>6 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='north_wall'>
+        <geometry>
+          <box>
+	    <size>6 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 3.0 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="south_wall">
+      <visual name="south_wall">
+	<pose>0 -3.0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>6 0.2 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='south_wall'>
+        <geometry>
+          <box>
+	    <size>6 0.2 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 -3.0 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+     <link name ="obstacle">
+      <visual name="obstacle">
+	<pose>0 0 1.25 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>2.0 2.0 2.5</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='obstacle'>
+        <geometry>
+          <box>
+	    <size>2.0 2.0 2.5</size>
+          </box>
+        </geometry>
+        <pose>0 0 1.25 0 -0 0</pose>
+      </collision>
+     </link>
+     
+  </model>
+</sdf>

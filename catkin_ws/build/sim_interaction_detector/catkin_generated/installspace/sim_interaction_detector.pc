@@ -1,0 +1,8 @@
+prefix=/home/amateus/HANNRS/catkin_ws/install
+
+Name: sim_interaction_detector
+Description: Description of sim_interaction_detector
+Version: 0.0.0
+Cflags: -I/home/amateus/HANNRS/catkin_ws/install/include
+Libs: -L/home/amateus/HANNRS/catkin_ws/install/lib -lsim_interaction_detector
+Requires: gazebo_msgs geometry_msgs hannrs_msgs roscpp

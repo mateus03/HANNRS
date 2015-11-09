@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "sim_actors_control")
+set(sim_actors_control_MAINTAINER "mateus <mateus@todo.todo>")
+set(sim_actors_control_DEPRECATED "")
+set(sim_actors_control_VERSION "0.0.0")
+set(sim_actors_control_BUILD_DEPENDS "gazebo_ros" "geometry_msgs" "hannrs_msgs" "roscpp")
+set(sim_actors_control_RUN_DEPENDS "gazebo_ros" "geometry_msgs" "hannrs_msgs" "roscpp")
+set(sim_actors_control_BUILDTOOL_DEPENDS "catkin")

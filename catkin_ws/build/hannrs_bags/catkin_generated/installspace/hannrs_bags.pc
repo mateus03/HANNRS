@@ -1,0 +1,8 @@
+prefix=/home/amateus/HANNRS/catkin_ws/install
+
+Name: hannrs_bags
+Description: Description of hannrs_bags
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/amateus/HANNRS/catkin_ws/install/lib 
+Requires: 

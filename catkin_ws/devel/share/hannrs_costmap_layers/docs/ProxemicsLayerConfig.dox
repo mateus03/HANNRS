@@ -1,0 +1,14 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~enabled" : \b [bool] Whether to apply this plugin or not  min: False, default: True, max: True
+- \b "~amplitude" : \b [double] Amplitude of adjustments at peak min: 0.0, default: 254.0, max: 254.0
+- \b "~Cutoff" : \b [double] Minimum value of the cost function to consider min: 0.0, default: 100.0, max: 254.0
+- \b "~sigma_h" : \b [double] Variance in the direction of the person min: 0.0, default: 0.8, max: 10.0
+- \b "~factor_r" : \b [double] Factor of sigma_h to compute sigma_r min: 0.0, default: 0.5, max: 1.0
+- \b "~factor_s" : \b [double] Factor of sigma_h to compute sigma_s min: 0.0, default: 0.667, max: 1.0
+- \b "~Safety_dist" : \b [double] Max distance to compute cost function min: 0.0, default: 1.2, max: 3.6
+- \b "~interaction_dist" : \b [double] Minimum distance that the robot may approach when handing over objects min: 0.45, default: 0.6, max: 1.2
+- \b "~interaction_angle" : \b [double] Half the opening angle for object hand over min: 0.0, default: 0.785, max: 1.571
+

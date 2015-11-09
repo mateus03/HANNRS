@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="plant">
+    <link name="plant">
+      <visual name="plant">
+	<geometry>
+	  <mesh><uri>model://plant/meshes/plant1.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="plant">
+	<pose>0 0 0.3 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>0.55 0.55 0.6</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

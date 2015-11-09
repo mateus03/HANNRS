@@ -1,0 +1,8 @@
+prefix=/home/amateus/HANNRS/catkin_ws/devel
+
+Name: hannrs_sim
+Description: Description of hannrs_sim
+Version: 0.0.0
+Cflags: -I/home/amateus/HANNRS/catkin_ws/src/hannrs_sim/include
+Libs: -L/home/amateus/HANNRS/catkin_ws/devel/lib -lhannrs_sim
+Requires: angles geometry_msgs hannrs_msgs nav_msgs roscpp tf cv_bridge

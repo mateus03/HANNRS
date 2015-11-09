@@ -1,0 +1,22 @@
+<library path="libhannrs_costmap_layers">
+  <class name="hannrs_costmap_layers/ProxemicsLayer" type="hannrs_costmap_layers::ProxemicsLayer" base_class_type="costmap_2d::Layer">
+    <description>
+      Costmap layer of proxemics
+    </description>
+  </class>
+  <class name="hannrs_costmap_layers/VisibilityLayer" type="hannrs_costmap_layers::VisibilityLayer" base_class_type="costmap_2d::Layer">
+    <description>
+      Costmap layer for the visibility constraint
+    </description>
+  </class>
+  <class name="hannrs_costmap_layers/Pass_On_LeftLayer" type="hannrs_costmap_layers::Pass_On_LeftLayer" base_class_type="costmap_2d::Layer">
+    <description>
+      Costmap layer for passing on people's left side
+    </description>
+  </class>
+  <class name="hannrs_costmap_layers/InteractionLayer" type="hannrs_costmap_layers::InteractionLayer" base_class_type="costmap_2d::Layer">
+    <description>
+      Costmap layer for interaction sets
+    </description>
+  </class>
+</library>

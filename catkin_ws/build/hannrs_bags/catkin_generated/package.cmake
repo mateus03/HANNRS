@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hannrs_bags")
+set(hannrs_bags_MAINTAINER "mateus <mateus@todo.todo>")
+set(hannrs_bags_DEPRECATED "")
+set(hannrs_bags_VERSION "0.0.0")
+set(hannrs_bags_BUILD_DEPENDS "rospy")
+set(hannrs_bags_RUN_DEPENDS "rospy")
+set(hannrs_bags_BUILDTOOL_DEPENDS "catkin")

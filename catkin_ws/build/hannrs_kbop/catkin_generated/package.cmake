@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hannrs_kbop")
+set(hannrs_kbop_MAINTAINER "mateus <mateus@todo.todo>")
+set(hannrs_kbop_DEPRECATED "")
+set(hannrs_kbop_VERSION "0.0.0")
+set(hannrs_kbop_BUILD_DEPENDS "geometry_msgs" "roscpp")
+set(hannrs_kbop_RUN_DEPENDS "geometry_msgs" "roscpp")
+set(hannrs_kbop_BUILDTOOL_DEPENDS "catkin")

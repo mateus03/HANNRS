@@ -1,0 +1,8 @@
+prefix=/home/amateus/HANNRS/catkin_ws/devel
+
+Name: hannrs_kbop
+Description: Description of hannrs_kbop
+Version: 0.0.0
+Cflags: -I/home/amateus/HANNRS/catkin_ws/src/hannrs_kbop/include
+Libs: -L/home/amateus/HANNRS/catkin_ws/devel/lib -lhannrs_kbop
+Requires: geometry_msgs roscpp

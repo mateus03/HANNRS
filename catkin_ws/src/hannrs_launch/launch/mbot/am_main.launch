@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+	<arg name="map" default="$(find hannrs_maps)/maps/hannrs_LRM-nav.yaml"/>
+	
+	<remap from="/tf" to="$(env ROS_NAMESPACE)/tf"/>
+
+	<!-- Run the map server -->
+	<node name="map_server" pkg="map_server" type="map_server" args=" $(arg map)" required="true">
+            <param name="frame_id" value="/map" />
+        </node>
+
+	<!--- AMCL -->
+	<include file="amcl.launch"/>
+
+	<!-- Move Base -->
+	<include file="move_base.launch"/>
+
+</launch>

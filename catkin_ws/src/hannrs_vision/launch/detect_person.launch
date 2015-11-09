@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <node pkg="hannrs_vision" type="detect_person" name="detect_person" output="screen">
+    <param name="image" value="/camera_driver_97_2/stream" />
+    <param name="calib_file" value="$(find hannrs_vision)/calib/calib_cam97.yml"/>
+  </node>
+
+</launch>

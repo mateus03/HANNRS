@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name="sofa">
+    <link name="sofa">
+      <visual name="sofa">
+	<geometry>
+	  <mesh><uri>model://sofa/meshes/sofa3.dae</uri></mesh>
+        </geometry>
+      </visual>
+      <collision name="base">
+	<pose>0 0 0.22 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>2.19 0.74 0.44</size>
+	  </box>
+        </geometry>
+      </collision>
+      <collision name="top">
+	<pose>0 0.62 0.62 0 0 0</pose>
+	<geometry>
+	  <box>
+	    <size>1.80 0.24 0.40</size>
+	  </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

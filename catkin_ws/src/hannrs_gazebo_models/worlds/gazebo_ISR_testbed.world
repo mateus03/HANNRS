@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+      <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Orange</name>
+          </script>
+      </material>
+    </include>
+
+    <!-- Global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://outside_wall</uri>
+    </include>
+
+    <include>
+      <uri>model://bedroom</uri>
+    </include>
+
+    <include>
+      <uri>model://bathroom</uri>
+    </include>
+
+    <include>
+      <uri>model://table</uri>
+      <pose>1.5 -1.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://floor</uri>
+    </include>
+ 
+    <include>
+      <uri>model://inside_hallway</uri>
+    </include>
+
+    <include>
+      <uri>model://outside_hallway</uri>
+    </include>
+
+    <include>
+      <uri>model://patio</uri>
+    </include>
+
+    <!-- Focus camera on tall pendulum -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>4.927360 -4.376610 3.740080 0.000000 0.275643 2.356190</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+
+  </world>
+</sdf>

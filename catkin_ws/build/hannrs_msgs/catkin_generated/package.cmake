@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hannrs_msgs")
+set(hannrs_msgs_MAINTAINER "mateus <mateus@todo.todo>")
+set(hannrs_msgs_DEPRECATED "")
+set(hannrs_msgs_VERSION "0.0.0")
+set(hannrs_msgs_BUILD_DEPENDS "message_generation" "geometry_msgs" "std_msgs")
+set(hannrs_msgs_RUN_DEPENDS "message_runtime" "geometry_msgs" "std_msgs")
+set(hannrs_msgs_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,15 @@
+\subsubsection usage Usage
+\verbatim
+<node name="hannrs_costmap_layers" pkg="hannrs_costmap_layers" type="hannrs_costmap_layers">
+  <param name="enabled" type="bool" value="True" />
+  <param name="amplitude" type="double" value="254.0" />
+  <param name="Cutoff" type="double" value="100.0" />
+  <param name="sigma_h" type="double" value="0.8" />
+  <param name="factor_r" type="double" value="0.5" />
+  <param name="factor_s" type="double" value="0.667" />
+  <param name="Safety_dist" type="double" value="1.2" />
+  <param name="interaction_dist" type="double" value="0.6" />
+  <param name="interaction_angle" type="double" value="0.785" />
+</node>
+\endverbatim
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<launch>
+
+  <!-- Launching Gazebo -->
+
+    <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="false"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+
+    <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" value="$(find hannrs_gazebo_models)/worlds/living_room_wout_people.world"/>
+      <arg name="debug" value="$(arg debug)" />
+      <arg name="gui" value="$(arg gui)" />
+      <arg name="paused" value="$(arg paused)"/>
+      <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+      <arg name="headless" value="$(arg headless)"/>
+    </include>
+
+    <!-- Load the URDF into the ROS Parameter Server -->
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find cobot_description)/urdf/scout.urdf.xacro'" />
+
+    <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model scout -param robot_description"/>
+
+    <!-- TF hacker for the gazebo TFs -->
+    <node pkg="tf" type="static_transform_publisher" name="tf_hacker" args="0 0 0 0 0 0 /base_footprint /scout_base_link 100"/> 
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+      <param name="publish_frequency" type="double" value="30.0"/>
+    </node>
+  
+    <!-- Launching hector_slam, joy and the drivers -->
+    <node pkg="hannrs_kbop" type="hannrs_kbop_node" name="kbop"/>
+
+    <node pkg="gmapping" type="slam_gmapping" name="cobot_slam">
+      <remap from="scan" to="/rrbot/laser/scan"/>
+      <param name="base_frame" value="scout_base_link"/>
+      <param name="odom_frame" value="odom"/>
+      <param name="delta" value="0.05"/>
+      <param name="xmin" value="-12.8"/>
+      <param name="ymin" value="-12.8"/>
+      <param name="xmax" value="12.8"/>
+      <param name="ymax" value="12.8"/>
+    </node>
+
+</launch>

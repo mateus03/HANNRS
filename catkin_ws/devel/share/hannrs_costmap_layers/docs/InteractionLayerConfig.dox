@@ -1,0 +1,7 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~enabled" : \b [bool] Whether to apply this plugin or not  min: False, default: True, max: True
+- \b "~importance" : \b [double] Factor to multiply by the costmap_2d::LethalObstacle cost min: 0.0, default: 1.0, max: 1.0
+

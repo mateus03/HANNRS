@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  <!-- Launching amcl, joy and the drivers --> 
+  <!--<arg name="map" default="$(find hannrs_maps)/maps/hannrs_LRM.yaml"/>
+  
+  <node name="map_server" pkg="map_server" type="map_server" args=" $(arg map)" required="true">
+    <param name="frame_id" value="/map" />
+  </node>-->
+  
+  <node pkg="hannrs_vision" type="vision_node" name="vision_node97" output="screen">
+    <param name="image" value="/camera_driver_97_2/stream" />
+    <param name="calib_file" value="$(find hannrs_vision)/calib/calib_cam97.yml"/>
+    <param name="borders_file" value="$(find hannrs_vision)/calib/cam97_borders.yaml"/>
+    <param name="classifier" value="$(find hannrs_vision)/data/cam97full_classifier2.xml"/>
+    <param name="camera" value="cam97"/>
+    <param name="data" value="/home/mateus/cam97_posdata.txt"/>
+    <param name="transform" value="$(find hannrs_vision)/calib/cam97_world.yaml"/>
+  </node>
+  
+  <!--<node pkg="hannrs_vision" type="vision_node" name="vision_node99" output="screen">
+    <param name="image" value="/camera_driver_99_2/stream" />
+    <param name="calib_file" value="$(find hannrs_vision)/calib/calib_cam99.yml"/>
+    <param name="borders_file" value="$(find hannrs_vision)/calib/cam99_borders.yaml"/>
+    <param name="classifier" value="$(find hannrs_vision)/data/cam98full_classifier.xml"/>
+    <param name="camera" value="cam99"/>
+    <param name="data" value="/home/mateus/cam99_posdata.txt"/>
+    <param name="transform" value="$(find hannrs_vision)/calib/cam99_world.yaml"/>
+  </node>-->
+  
+<!--   <node pkg="hannrs_vision" type="track2" name="tracker" output="screen"/> -->
+  
+<!--   <node pkg="hannrs_vision" type="tvchecker" name="tvchecker"/> -->
+    
+  
+</launch>

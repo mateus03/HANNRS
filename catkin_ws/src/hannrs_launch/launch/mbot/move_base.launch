@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>	
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find hannrs_config)/config/mbot_costmap_params.yaml" command="load"/>
+        <!--rosparam file="$(find hannrs_config)/config/mbot_dwa_params.yaml" command="load"/-->
+	<rosparam file="$(find hannrs_config)/config/trajectory_planner_ros_params.yaml" command="load"/>
+        <rosparam file="$(find hannrs_config)/config/mbot_mb_params.yaml" command="load"/>
+        <!--param name="base_global_planner" type="string" value="hannrs_planners/Dijkstra_planner" /-->
+	<param name="base_global_planner" value="hannrs_planners/Astar_planner"/>
+	<!--param name="base_global_planner" value="hannrs_planners/RRT_Planner"/-->
+        <!--param name="base_local_planner" type="string" value="dwa_local_planner/DWAPlannerROS" /-->
+	<param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
+    </node>
+</launch>

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "sim_interaction_detector")
+set(sim_interaction_detector_MAINTAINER "mateus <mateus@todo.todo>")
+set(sim_interaction_detector_DEPRECATED "")
+set(sim_interaction_detector_VERSION "0.0.0")
+set(sim_interaction_detector_BUILD_DEPENDS "gazebo_msgs" "geometry_msgs" "hannrs_msgs" "roscpp")
+set(sim_interaction_detector_RUN_DEPENDS "gazebo_msgs" "geometry_msgs" "hannrs_msgs" "roscpp")
+set(sim_interaction_detector_BUILDTOOL_DEPENDS "catkin")

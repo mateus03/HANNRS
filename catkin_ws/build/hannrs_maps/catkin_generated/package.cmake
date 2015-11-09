@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hannrs_maps")
+set(hannrs_maps_MAINTAINER "mateus <mateus@todo.todo>")
+set(hannrs_maps_DEPRECATED "")
+set(hannrs_maps_VERSION "0.0.0")
+set(hannrs_maps_BUILD_DEPENDS )
+set(hannrs_maps_RUN_DEPENDS )
+set(hannrs_maps_BUILDTOOL_DEPENDS "catkin")

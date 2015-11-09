@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  <!-- Launching amcl, joy and the drivers --> 
+  <arg name="map" default="$(find hannrs_maps)/maps/living_sim.yaml"/>
+  
+  <node name="map_server" pkg="map_server" type="map_server" args=" $(arg map)" required="true">
+    <param name="frame_id" value="/map" />
+  </node>
+  
+  <include file="$(find hannrs_launch)/launch/sim/amcl_simulation.launch"/>
+  
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
+<!--      <param name="base_global_planner" value="hannrs_planners/RRT_Planner"/>  -->
+    <param name="base_global_planner" value="hannrs_planners/Dijkstra_planner"/>
+<!--     <param name="base_global_planner" value="hannrs_planners/Astar_planner"/> -->
+    <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/> 
+    <rosparam file="$(find hannrs_config)/config/TrajectoryPlannerROS.yaml" command="load" /> 
+    <!--<param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> 
+    <rosparam file="$(find hanp_sim)/config/dwa_params.yaml" command="load" />-->
+    <rosparam file="$(find hannrs_config)/config/move_base_param.yaml" command="load" />
+    <rosparam file="$(find hannrs_config)/config/hanp_costmap.yaml" command="load" />
+  </node>
+  
+</launch>

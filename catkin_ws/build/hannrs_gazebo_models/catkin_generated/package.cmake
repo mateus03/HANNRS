@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hannrs_gazebo_models")
+set(hannrs_gazebo_models_MAINTAINER "mateus <mateus@todo.todo>")
+set(hannrs_gazebo_models_DEPRECATED "")
+set(hannrs_gazebo_models_VERSION "0.0.0")
+set(hannrs_gazebo_models_BUILD_DEPENDS )
+set(hannrs_gazebo_models_RUN_DEPENDS )
+set(hannrs_gazebo_models_BUILDTOOL_DEPENDS "catkin")

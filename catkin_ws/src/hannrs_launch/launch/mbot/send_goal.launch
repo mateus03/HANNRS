@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<launch>
+
+        <!-- Logging -->
+        <node name="send_goal" pkg="hannrs_send_goals" type="hannrs_send_goals" output="screen">
+	  <param name="action" value="go to" type="str"/>
+	  <param name="person" value="Andre" type="str"/>
+	  <param name="x" value="0.0" type="double"/>
+	  <param name="y" value="0.0" type="double"/>
+<!-- 	  <param name="yaw" value="2.025" type="double"/> -->
+	  <param name="yaw" value="0.457" type="double"/>
+<!-- 	  <param name="yaw" value="-1.103" type="double"/> -->
+	</node>
+	
+</launch>

@@ -1,0 +1,2 @@
+hannrs_bags:hannrs_config:hannrs_costmap_layers:hannrs_gazebo_models:hannrs_kbop:hannrs_launch:hannrs_maps:hannrs_msgs:hannrs_planners:hannrs_send_goals:hannrs_sim:hannrs_tests:hannrs_vision:sim_actors_control:sim_interaction_detector:sim_people_tracker
+-DCATKIN_DEVEL_PREFIX=/home/amateus/HANNRS/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/amateus/HANNRS/catkin_ws/install -G Unix Makefiles

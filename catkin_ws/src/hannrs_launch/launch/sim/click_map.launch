@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+    
+    <node pkg="hannrs_sim" type="test_hanp" name="test_hanp" output="screen">
+      <param name="map" value="$(find hannrs_maps)/maps/hannrs_LRM-nav.pgm"/>
+      <param name="topic" value="/mbot05/move_base/global_costmap/costmap"/>
+    </node>
+    
+   <!-- <node pkg="interaction_detector" type="interaction_mbot" name="mbot_interaction" output="screen"/>-->
+
+</launch>

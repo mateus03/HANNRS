@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  
+  <include file="$(find hannrs_launch)/launch/sim/living.launch"/>
+  
+  <include file="$(find hannrs_launch)/launch/sim/model.launch"/>
+  
+  <node pkg="hannrs_kbop" type="hannrs_kbop_node" name="kbop"/>
+  
+  <node pkg="sim_people_tracker" type="sim_people_tracker_node" name="people_tracker" output="screen"/>
+  
+  <node pkg="sim_interaction_detector" type="sim_interaction_detector_node" name="interaction_detector" output="screen"/>
+  
+  <include file="$(find hannrs_launch)/launch/sim/move_base.launch"/>
+
+</launch>
